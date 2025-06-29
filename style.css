@@ -1,0 +1,105 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #fff0f6 0%, #ffe0fb 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#bears-bg {
+  pointer-events: none;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+}
+.bear-emoji {
+  position: absolute;
+  font-size: 2.4rem;
+  opacity: 0.8;
+  animation: float 7s linear infinite;
+  user-select: none;
+  will-change: transform, opacity;
+}
+@keyframes float {
+  0% { transform: translateY(0) scale(1);}
+  90% {opacity: 0.7;}
+  100% { transform: translateY(-100vh) scale(1.1); opacity: 0;}
+}
+#main-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.big-heart {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4a77 80%, #fca4c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  color: #fff;
+  box-shadow: 0 2px 18px #ff4a7755;
+  margin-bottom: 32px;
+  margin-top: 52px;
+  transition: background 0.3s;
+  position: relative;
+  font-family: cursive, Arial, sans-serif;
+  letter-spacing: 2px;
+  border: 3px solid #fff5f5;
+  text-align: center;
+  animation: pulse 1.3s infinite alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1);}
+  to { transform: scale(1.07);}
+}
+#start-btn {
+  background: linear-gradient(90deg, #ff4a77 60%, #fca4c8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 28px;
+  padding: 15px 42px;
+  font-size: 1.35rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #ff4a7740;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  transition: background 0.2s, transform 0.15s;
+}
+#start-btn:hover {
+  background: linear-gradient(90deg, #fca4c8 40%, #ff4a77 100%);
+  color: #b10042;
+  transform: scale(1.05);
+}
+.ip-text {
+  font-size: 2.1rem;
+  font-family: monospace;
+  margin-top: 16px;
+  color: #222;
+  background: #fff8fc;
+  padding: 10px 34px;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #ff4a7744;
+  display: inline-block;
+  letter-spacing: 2px;
+  min-height: 2.4rem;
+}
+.fade-in {
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
